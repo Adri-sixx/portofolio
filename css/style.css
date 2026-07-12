@@ -1,10 +1,10 @@
 /* ==========================================================================
-   PORTFOLITE FLUID NOIR TEMPLATE + GRUNGE TYPOGRAPHY // ADRI AUFA
+   PORTFOLITE FLUID NOIR TEMPLATE + SWISS DESIGN TYPOGRAPHY // ADRI AUFA
    COLOR PALETTE: PITCH BLACK, GRUNGE RED (#E61C1C), LIGHT GRAY
-   FEATURES: SMART AUTO-HIDE/REVEAL STICKY NAVBAR, PROFILE DOSSIER SECTION
+   FEATURES: SMART AUTO-HIDE/REVEAL STICKY NAVBAR, SWISS GRAPHIC DESIGN FONTS
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&family=Rubik+Distressed&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&family=Space+Grotesk:wght@400..700&family=Syne:wght@700;800&display=swap');
 
 :root,
 html[data-theme="dark"] {
@@ -34,11 +34,11 @@ html[data-theme="dark"] {
   --frame-shadow: 0 40px 100px rgba(0, 0, 0, 0.95);
   --card-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
   
-  /* Typography */
-  --font-grunge-main: 'Rubik Distressed', cursive, sans-serif;
-  --font-grunge-alt: 'Permanent Marker', cursive;
-  --font-typewriter: 'Special Elite', monospace;
-  --font-poster: 'Bebas Neue', sans-serif;
+  /* Swiss International Typographic Style */
+  --font-grunge-main: 'Syne', 'Inter Tight', 'Plus Jakarta Sans', sans-serif;
+  --font-grunge-alt: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  --font-typewriter: 'Plus Jakarta Sans', 'Inter Tight', sans-serif;
+  --font-poster: 'Inter Tight', 'Plus Jakarta Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   
   --radius-pill: 999px;
@@ -89,6 +89,7 @@ body {
   background-color: var(--bg-viewport);
   color: var(--text-primary);
   font-family: var(--font-typewriter);
+  font-weight: 400;
   line-height: 1.6;
   min-height: 100vh;
   padding: 24px;
@@ -236,6 +237,7 @@ html[data-theme="light"] .fluid-aura-glow::before {
   align-items: center;
   justify-content: center;
   font-family: var(--font-poster);
+  font-weight: 800;
   font-size: 1.1rem;
   box-shadow: 0 0 14px var(--accent-red-glow);
   flex-shrink: 0;
@@ -243,9 +245,10 @@ html[data-theme="light"] .fluid-aura-glow::before {
 
 .brand-name {
   font-family: var(--font-grunge-alt);
+  font-weight: 700;
   font-size: clamp(1.1rem, 1.35vw, 1.35rem);
   color: var(--text-primary);
-  letter-spacing: 0.03em;
+  letter-spacing: -0.02em;
   white-space: nowrap;
 }
 
@@ -260,7 +263,8 @@ html[data-theme="light"] .fluid-aura-glow::before {
 
 .nav-links-center a {
   font-family: var(--font-typewriter);
-  font-size: clamp(0.78rem, 1vw, 0.94rem);
+  font-weight: 500;
+  font-size: clamp(0.82rem, 1vw, 0.96rem);
   color: var(--text-secondary);
   transition: color var(--transition-fast);
 }
@@ -288,6 +292,7 @@ html[data-theme="light"] .fluid-aura-glow::before {
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-pill);
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: clamp(0.74rem, 0.85vw, 0.82rem);
   color: var(--text-primary);
   cursor: pointer;
@@ -310,6 +315,7 @@ html[data-theme="light"] .fluid-aura-glow::before {
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-pill);
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: clamp(0.74rem, 0.85vw, 0.82rem);
   color: var(--text-primary);
   white-space: nowrap;
@@ -388,8 +394,9 @@ html[data-theme="light"] .fluid-aura-glow::before {
 
 .mobile-nav-list a {
   font-family: var(--font-poster);
+  font-weight: 800;
   font-size: 1.45rem;
-  letter-spacing: 0.05em;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
   display: block;
   transition: color var(--transition-fast), transform var(--transition-fast);
@@ -430,6 +437,7 @@ html[data-theme="light"] .fluid-aura-glow::before {
   border-radius: var(--radius-pill);
   font-family: var(--font-mono);
   font-size: 0.82rem;
+  font-weight: 600;
   color: var(--text-secondary);
   margin-bottom: 24px;
   backdrop-filter: blur(8px);
@@ -443,21 +451,23 @@ html[data-theme="light"] .fluid-aura-glow::before {
   box-shadow: 0 0 8px var(--accent-red);
 }
 
-/* Grunge Headline */
+/* Swiss Design Headline */
 .grunge-hero-headline {
   font-family: var(--font-grunge-main);
-  font-size: clamp(3rem, 6.5vw, 6rem);
-  line-height: 1.05;
+  font-weight: 800;
+  font-size: clamp(3rem, 6.5vw, 6.2rem);
+  line-height: 0.98;
   color: var(--text-primary);
-  max-width: 950px;
-  letter-spacing: 0.02em;
-  margin-bottom: 24px;
+  max-width: 980px;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
 }
 
 html[data-theme="dark"] .grunge-hero-headline {
   text-shadow: 
-    0 10px 40px rgba(0, 0, 0, 0.8),
-    0 0 25px rgba(230, 28, 28, 0.25);
+    0 12px 40px rgba(0, 0, 0, 0.85),
+    0 0 30px rgba(230, 28, 28, 0.22);
 }
 
 .grunge-hero-headline .red-grunge {
@@ -469,7 +479,7 @@ html[data-theme="dark"] .grunge-hero-headline {
   font-family: var(--font-typewriter);
   font-size: 1.15rem;
   color: var(--text-secondary);
-  max-width: 640px;
+  max-width: 680px;
   line-height: 1.7;
   margin-bottom: 40px;
 }
@@ -493,8 +503,9 @@ html[data-theme="dark"] .grunge-hero-headline {
   color: #FFFFFF;
   border-radius: var(--radius-pill);
   font-family: var(--font-poster);
-  font-size: 1.25rem;
-  letter-spacing: 0.06em;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 10px 28px rgba(230, 28, 28, 0.4);
   transition: all var(--transition-fast);
@@ -516,7 +527,8 @@ html[data-theme="dark"] .grunge-hero-headline {
   border: 1px solid var(--border-light);
   border-radius: var(--radius-pill);
   font-family: var(--font-typewriter);
-  font-size: 0.95rem;
+  font-weight: 600;
+  font-size: 0.98rem;
   backdrop-filter: blur(10px);
   transition: all var(--transition-fast);
 }
@@ -581,7 +593,8 @@ html[data-theme="dark"] .grunge-hero-headline {
 
 .logo-item {
   font-family: var(--font-grunge-alt);
-  font-size: 1.25rem;
+  font-weight: 600;
+  font-size: 1.1rem;
   color: var(--text-secondary);
   opacity: 0.85;
   display: flex;
@@ -616,15 +629,19 @@ html[data-theme="dark"] .grunge-hero-headline {
   border: 1px solid rgba(230, 28, 28, 0.4);
   border-radius: var(--radius-pill);
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.75rem;
   margin-bottom: 14px;
 }
 
 .section-title-grunge {
   font-family: var(--font-grunge-main);
-  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  letter-spacing: -0.035em;
   color: var(--text-primary);
-  line-height: 1.1;
+  line-height: 1.08;
+  text-transform: uppercase;
 }
 
 /* ==========================================================================
@@ -683,8 +700,9 @@ html[data-theme="dark"] .grunge-hero-headline {
 
 .profile-tagline-grunge {
   font-family: var(--font-poster);
+  font-weight: 800;
   font-size: clamp(1.8rem, 2.4vw, 2.45rem);
-  letter-spacing: 0.04em;
+  letter-spacing: -0.025em;
   color: var(--text-primary);
   line-height: 1.18;
 }
@@ -695,7 +713,7 @@ html[data-theme="dark"] .grunge-hero-headline {
 
 .profile-caption-p {
   font-family: var(--font-typewriter);
-  font-size: 1.03rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
   line-height: 1.82;
 }
@@ -748,8 +766,9 @@ html[data-theme="dark"] .grunge-hero-headline {
 
 .feature-title-grunge {
   font-family: var(--font-poster);
-  font-size: 2.4rem;
-  letter-spacing: 0.05em;
+  font-weight: 800;
+  font-size: 2.3rem;
+  letter-spacing: -0.025em;
   color: var(--text-primary);
   margin-bottom: 16px;
 }
@@ -779,12 +798,15 @@ html[data-theme="dark"] .grunge-hero-headline {
 .spec-glass-item .lbl {
   font-family: var(--font-mono);
   font-size: 0.72rem;
+  font-weight: 600;
   color: var(--text-muted);
 }
 
 .spec-glass-item .val {
   font-family: var(--font-poster);
-  font-size: 1.2rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.015em;
   color: var(--text-primary);
   margin-top: 4px;
 }
@@ -806,7 +828,8 @@ html[data-theme="dark"] .grunge-hero-headline {
 
 .estimator-group-title {
   font-family: var(--font-grunge-alt);
-  font-size: 1.25rem;
+  font-weight: 700;
+  font-size: 1.15rem;
   color: var(--accent-red);
   margin-bottom: 12px;
   display: block;
@@ -836,8 +859,9 @@ html[data-theme="dark"] .grunge-hero-headline {
 
 .option-name-grunge {
   font-family: var(--font-poster);
+  font-weight: 800;
   font-size: 1.35rem;
-  letter-spacing: 0.04em;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
 }
 
@@ -850,6 +874,7 @@ html[data-theme="dark"] .grunge-hero-headline {
 
 .option-price-tag {
   font-family: var(--font-poster);
+  font-weight: 800;
   font-size: 1.5rem;
   color: var(--accent-red);
 }
@@ -867,7 +892,9 @@ html[data-theme="dark"] .grunge-hero-headline {
 
 .readout-total-grunge {
   font-family: var(--font-grunge-main);
+  font-weight: 800;
   font-size: 3.4rem;
+  letter-spacing: -0.035em;
   line-height: 1.1;
   color: var(--text-primary);
   margin: 12px 0;
@@ -925,6 +952,7 @@ html[data-theme="dark"] .grunge-hero-headline {
   align-items: center;
   justify-content: space-between;
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.82rem;
   color: var(--text-secondary);
 }
