@@ -1,326 +1,631 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ADRI AUFA — Portfolite Noir Studio</title>
-  <meta name="description" content="Sleek Portfolite Noir Template combined with striking Editorial Serif Typography. Specializing in Web Building (Vanilla Website) and Full Stack Web (MySQL, Next.js)." />
-  <meta name="keywords" content="Portfolite Template, Serif Font, Editorial Design, Full Stack Web, Next.js, MySQL, Vanilla Website, Jakarta UTC+7" />
-  <meta name="author" content="Adri Aufa" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADRI AUFA — Portfolite Noir Studio</title>
+    <meta
+      name="description"
+      content="Sleek Portfolite Noir Template combined with striking Editorial Serif Typography. Specializing in Web Building (Vanilla Website) and Full Stack Web (MySQL, Next.js)."
+    />
+    <meta
+      name="keywords"
+      content="Portfolite Template, Serif Font, Editorial Design, Full Stack Web, Next.js, MySQL, Vanilla Website, Jakarta UTC+7"
+    />
+    <meta name="author" content="Adri Aufa" />
 
-  <!-- Preconnect & Modern Inter Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
+    <!-- Preconnect & Modern Inter Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Design System CSS -->
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
+    <!-- Design System CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- MAIN CURVED PORTFOLITE TEMPLATE FRAME -->
+    <main class="template-frame">
+      <!-- Fluid Abstract Aura Flowing Inside Container -->
+      <div class="fluid-aura-glow"></div>
 
-  <!-- MAIN CURVED PORTFOLITE TEMPLATE FRAME -->
-  <main class="template-frame">
+      <div class="frame-content">
+        <!-- TOP NAVBAR (RESPONSIVE SINGLE ROW ON DESKTOP & MEDIUM DESKTOP) -->
+        <header class="template-navbar">
+          <a href="#top" class="brand-pill">
+            <div class="brand-icon">AA</div>
+            <span class="brand-name">ADRI AUFA</span>
+          </a>
 
-    <!-- Fluid Abstract Aura Flowing Inside Container -->
-    <div class="fluid-aura-glow"></div>
+          <!-- Center Nav Links (Hidden on Mobile) -->
+          <ul class="nav-links-center">
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#featured">Featured Work</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
 
-    <div class="frame-content">
-
-      <!-- TOP NAVBAR (RESPONSIVE SINGLE ROW ON DESKTOP & MEDIUM DESKTOP) -->
-      <header class="template-navbar">
-        <a href="#top" class="brand-pill">
-          <div class="brand-icon">AA</div>
-          <span class="brand-name">ADRI AUFA</span>
-        </a>
-
-        <!-- Center Nav Links (Hidden on Mobile) -->
-        <ul class="nav-links-center">
-          <li><a href="#profile">Profile</a></li>
-          <li><a href="#featured">Featured Work</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <!-- Right Controls (Hidden on Mobile) -->
-        <div class="navbar-controls">
-          <!-- Theme Toggle Button (Dark mode primary) -->
-          <button class="btn-theme-toggle theme-toggle-trigger" aria-label="Toggle Dark/Light Theme">
-            <span class="theme-toggle-text">☀ LIGHT MODE</span>
-          </button>
-
-          <div class="jakarta-clock-pill">
-            <span class="dot"></span>
-            <span>JAKARTA [UTC+7] //</span>
-            <strong class="jakarta-clock-display">--:--:-- WIB</strong>
-          </div>
-        </div>
-
-        <!-- Burger Button (Visible ONLY on Mobile Screens <= 768px) -->
-        <button id="burgerBtn" class="btn-burger" aria-label="Toggle Mobile Menu">☰</button>
-      </header>
-
-      <!-- MOBILE DRAWER MENU (SLIDES DOWN ON MOBILE SCREENS <= 768px) -->
-      <nav id="mobileDrawer" class="mobile-drawer" aria-label="Mobile Navigation Drawer">
-        <ul class="mobile-nav-list">
-          <li><a href="#profile">Profile</a></li>
-          <li><a href="#featured">Featured Work</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <div class="mobile-drawer-footer">
-          <button class="btn-theme-toggle theme-toggle-trigger" style="width: 100%; justify-content: center;">
-            <span class="theme-toggle-text">☀ LIGHT MODE</span>
-          </button>
-
-          <div class="jakarta-clock-pill" style="width: 100%; justify-content: center;">
-            <span class="dot"></span>
-            <span>JAKARTA [UTC+7] //</span>
-            <strong class="jakarta-clock-display">--:--:-- WIB</strong>
-          </div>
-        </div>
-      </nav>
-
-      <!-- CENTERED HERO SECTION -->
-      <section id="top" class="template-hero">
-        
-        <!-- OVAL PILL BADGE: PROJECT SCOPES -->
-        <div class="hero-pill-badge">
-          <span class="red-dot"></span>
-          <span>Full Stack Web (Next.js &amp; MySQL) &bull; Web Building (Vanilla Website)</span>
-        </div>
-
-        <!-- Editorial Serif Typography Headline -->
-        <h1 class="grunge-hero-headline">
-          ARCHITECTURE THAT YOU <span class="red-grunge">NEED INDEED</span>
-        </h1>
-
-        <p class="hero-subdesc">
-          Elevate your venture with custom <strong>Web Building (Vanilla Website)</strong> using zero-dependency HTML/CSS/JS paired with enterprise-grade <strong>Full Stack Web Architecture</strong> powered by <strong>Next.js</strong> and relational <strong>MySQL databases</strong>.
-        </p>
-
-        <div class="hero-pill-actions">
-          <a href="pricing.html" class="btn-pill-red">Explore Pricing</a>
-          <a href="#featured" class="btn-pill-glass">See Projects</a>
-        </div>
-
-        <!-- Wave Scroll Line -->
-        <div class="hero-scroll-divider">
-          <span>Scroll down</span>
-          <span class="line"></span>
-          <div class="mouse-pill">
-            <div class="mouse-wheel"></div>
-          </div>
-          <span class="line"></span>
-          <span>to see projects</span>
-        </div>
-
-        <!-- Tech Stack Logo Strip -->
-        <div class="tech-strip-logos">
-          <span class="logo-item">● Vanilla Website (HTML/CSS/JS)</span>
-          <span class="logo-item">◈ Next.js Full Stack Architecture</span>
-          <span class="logo-item">❖ MySQL Relational DB</span>
-          <span class="logo-item">✱ Node.js Runtime</span>
-          <span class="logo-item">✦ Serverless &amp; API Routes</span>
-        </div>
-      </section>
-
-      <!-- SECTION 00 // FOUNDER PROFILE DOSSIER (EXACTLY BETWEEN HERO & FEATURED WORK) -->
-      <section id="profile" class="frame-section">
-        <div class="section-head-centered">
-          <span class="section-pill-tag">STUDIO FOUNDER // PROFILE DOSSIER</span>
-          <h2 class="section-title-grunge">ADRI AUFA — LAW &amp; ENGINEERING SYNTHESIS</h2>
-        </div>
-
-        <article class="profile-dossier-card">
-          <!-- Left Column: Portrait Photo & Badge -->
-          <div class="profile-photo-wrapper">
-            <img 
-              src="adri_aufa_profile.jpeg" 
-              onerror="this.onerror=null; this.src='assets/images/adri_aufa_profile.jpg';"
-              alt="Adri Aufa — Civil Law Student &amp; Software Architect" 
-            />
-            <div class="profile-photo-badge">
-              <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--text-secondary);">SPECIALIZATION:</span>
-              <strong style="font-family:var(--font-poster);font-size:1.1rem;color:var(--accent-red);letter-spacing:0.04em;">CIVIL LAW &bull; WEB ARCHITECT</strong>
-            </div>
-          </div>
-
-          <!-- Right Column: Full Caption & Synthesis Breakdown -->
-          <div class="profile-bio-content">
-            <div>
-              <span style="font-family:var(--font-grunge-alt);font-size:1.1rem;color:var(--accent-red);display:block;margin-bottom:12px;">FOUNDER DOSSIER &amp; VISION</span>
-              <h3 class="profile-tagline-grunge">
-                BRIDGING <span>LEGAL STRUCTURES</span> &amp; ACCESSIBLE TECHNOLOGY
-              </h3>
-              
-              <p class="profile-caption-p" style="margin-top:18px;">
-                I am a <strong>5th-semester Law student specializing in Civil Law</strong>, driven by a mission to bridge the gap between complex legal structures and accessible technology. Believing that software should empower and serve everyone, I build lightweight, high-performance web applications designed to solve real-world problems.
-              </p>
-
-              <p class="profile-caption-p">
-                My technical stack balances the lightning-fast agility of <strong>Vanilla architecture (HTML5, CSS3, Modern JavaScript)</strong> for conversion-focused marketing sites, with the robust capability of <strong>Next.js and MySQL</strong> for secure, full-stack web applications. By blending analytical legal thinking with modern software engineering, I create secure, user-centric digital assets that deliver clear social and business impact.
-              </p>
-            </div>
-
-            <div class="profile-specs-strip">
-              <div class="spec-glass-item">
-                <div class="lbl">ACADEMIC BACKGROUND</div>
-                <div class="val">5th Semester (Civil Law)</div>
-              </div>
-              <div class="spec-glass-item">
-                <div class="lbl">1. FRONTEND ARCHITECTURE</div>
-                <div class="val">Vanilla Website (HTML/CSS/JS)</div>
-              </div>
-              <div class="spec-glass-item">
-                <div class="lbl">2. FULL STACK SYSTEM</div>
-                <div class="val">Next.js + MySQL Database</div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <!-- SECTION 01 // FEATURED WORK -->
-      <section id="featured" class="frame-section">
-        <div class="section-head-centered">
-          <span class="section-pill-tag">CASE STUDY // FEATURED WORK</span>
-          <h2 class="section-title-grunge">SELECTED STARTUP VENTURE</h2>
-        </div>
-
-        <article class="featured-card-glass">
-          <div class="featured-visual">
-            <img src="assets/images/project1.png" alt="VEXA Platform UI" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80'" />
-          </div>
-
-          <div class="featured-content">
-            <div>
-              <span style="font-family:var(--font-grunge-alt);font-size:1.1rem;color:var(--accent-red);display:block;margin-bottom:10px;">FULL STACK WEB APPLICATION</span>
-              <h3 class="feature-title-grunge">VEXA PLATFORM — ANALYTICS &amp; MANAGEMENT PORTAL</h3>
-              <p class="feature-body-text">
-                Engineered a comprehensive modern web platform designed for high-growth tech startups. Built from the ground up without heavy frontend frameworks to achieve lightning-fast sub-second render speeds with pure Vanilla JavaScript, backed by a high-performance Next.js API layer and a robust MySQL database schema.
-              </p>
-
-              <div class="feature-specs-grid">
-                <div class="spec-glass-item">
-                  <div class="lbl">1. WEB BUILDING (FRONTEND)</div>
-                  <div class="val">Vanilla Website (HTML, CSS, JS)</div>
-                </div>
-                <div class="spec-glass-item">
-                  <div class="lbl">2. FULL STACK WEB ARCHITECTURE</div>
-                  <div class="val">Next.js (React &amp; Server Actions)</div>
-                </div>
-                <div class="spec-glass-item">
-                  <div class="lbl">RELATIONAL DATABASE</div>
-                  <div class="val">MySQL Relational Schema</div>
-                </div>
-                <div class="spec-glass-item">
-                  <div class="lbl">RENDER VELOCITY</div>
-                  <div class="val">0.4s First Contentful Paint</div>
-                </div>
-              </div>
-            </div>
-
-            <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border-glass);padding-top:24px;">
-              <span style="font-family:var(--font-mono);font-size:0.85rem;color:var(--text-secondary);">
-                STATUS: <strong style="color:var(--text-primary)">PRODUCTION LAUNCHED</strong>
-              </span>
-              <button id="openCaseStudyBtn" class="btn-pill-red" style="font-size:1.05rem;padding:12px 24px;">
-                Inspect Case Study &rarr;
-              </button>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <!-- SECTION 02 // CONTACT -->
-      <section id="contact" class="frame-section">
-        <div class="contact-glass-grid">
-          <div>
-            <span class="section-pill-tag">LET'S COLLABORATE</span>
-            <h2 class="section-title-grunge" style="margin: 16px 0;">START A PROJECT CONVERSATION</h2>
-            <p style="font-family:var(--font-typewriter);font-size:1.05rem;color:var(--text-secondary);margin-bottom:32px;line-height:1.7;">
-              Reach out directly to discuss <strong>Web Building (Vanilla Website)</strong> or <strong>Full Stack Web (MySQL, Next.js)</strong> solutions for your startup.
-            </p>
-            <div style="font-family:var(--font-mono);font-size:0.92rem;color:var(--text-primary);">
-              DIRECT EMAIL: <strong style="color:var(--accent-red);">contact@adriaufa.dev</strong><br />
-              NODE BASE: <strong>Jakarta, Indonesia (UTC+7 / WIB)</strong>
-            </div>
-          </div>
-
-          <form id="contactForm" class="contact-form-glass">
-            <input type="text" id="clientName" class="input-glass" placeholder="Your Name *" required />
-            <input type="email" id="clientEmail" class="input-glass" placeholder="Your Email Address *" required />
-            <textarea id="clientBrief" class="textarea-glass" placeholder="Tell us about your project scope (Vanilla Website / Next.js &amp; MySQL)..." required></textarea>
-            <button type="submit" class="btn-pill-red" style="justify-content:center;">
-              Send Message &rarr;
+          <!-- Right Controls (Hidden on Mobile) -->
+          <div class="navbar-controls">
+            <!-- Theme Toggle Button (Dark mode primary) -->
+            <button
+              class="btn-theme-toggle theme-toggle-trigger"
+              aria-label="Toggle Dark/Light Theme"
+            >
+              <span class="theme-toggle-text">☀ LIGHT MODE</span>
             </button>
-          </form>
-        </div>
-      </section>
 
-      <!-- FOOTER -->
-      <footer class="frame-footer">
-        <div>
-          <strong style="color:var(--text-primary);">ADRI AUFA</strong> — PORTFOLITE ARCHITECTURE STUDIO
-        </div>
-        <div>
-          WEB BUILDING (VANILLA WEBSITE) • FULL STACK WEB (MYSQL, NEXT.JS) • <a href="pricing.html" style="color:var(--accent-red);text-decoration:underline;">SEE PRICING</a>
-        </div>
-      </footer>
+            <div class="jakarta-clock-pill">
+              <span class="dot"></span>
+              <span>JAKARTA [UTC+7] //</span>
+              <strong class="jakarta-clock-display">--:--:-- WIB</strong>
+            </div>
+          </div>
 
-    </div>
-  </main>
+          <!-- Burger Button (Visible ONLY on Mobile Screens <= 768px) -->
+          <button
+            id="burgerBtn"
+            class="btn-burger"
+            aria-label="Toggle Mobile Menu"
+          >
+            ☰
+          </button>
+        </header>
 
-  <!-- CASE STUDY DOSSIER MODAL -->
-  <div id="caseStudyModal" class="modal-backdrop" role="dialog" aria-hidden="true">
-    <div class="modal-box">
-      <div class="modal-header">
-        <div style="font-family:var(--font-poster);font-size:1.45rem;letter-spacing:0.06em;color:var(--text-primary);">
-          CASE STUDY // VEXA ENTERPRISE PLATFORM
-        </div>
-        <button id="closeModalBtn" class="btn-close-modal" aria-label="Close Modal">✕</button>
+        <!-- MOBILE DRAWER MENU (SLIDES DOWN ON MOBILE SCREENS <= 768px) -->
+        <nav
+          id="mobileDrawer"
+          class="mobile-drawer"
+          aria-label="Mobile Navigation Drawer"
+        >
+          <ul class="mobile-nav-list">
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#featured">Featured Work</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <div class="mobile-drawer-footer">
+            <button
+              class="btn-theme-toggle theme-toggle-trigger"
+              style="width: 100%; justify-content: center"
+            >
+              <span class="theme-toggle-text">☀ LIGHT MODE</span>
+            </button>
+
+            <div
+              class="jakarta-clock-pill"
+              style="width: 100%; justify-content: center"
+            >
+              <span class="dot"></span>
+              <span>JAKARTA [UTC+7] //</span>
+              <strong class="jakarta-clock-display">--:--:-- WIB</strong>
+            </div>
+          </div>
+        </nav>
+
+        <!-- CENTERED HERO SECTION -->
+        <section id="top" class="template-hero">
+          <!-- OVAL PILL BADGE: PROJECT SCOPES -->
+          <div class="hero-pill-badge">
+            <span class="red-dot"></span>
+            <span
+              >Full Stack Web (Next.js &amp; MySQL) &bull; Web Building (Vanilla
+              Website)</span
+            >
+          </div>
+
+          <!-- Editorial Serif Typography Headline -->
+          <h1 class="grunge-hero-headline">
+            ARCHITECTURE THAT YOU <span class="red-grunge">NEED INDEED</span>
+          </h1>
+
+          <p class="hero-subdesc">
+            Elevate your venture with custom
+            <strong>Web Building (Vanilla Website)</strong> using
+            zero-dependency HTML/CSS/JS paired with enterprise-grade
+            <strong>Full Stack Web Architecture</strong> powered by
+            <strong>Next.js</strong> and relational
+            <strong>MySQL databases</strong>.
+          </p>
+
+          <div class="hero-pill-actions">
+            <a href="pricing.html" class="btn-pill-red">Explore Pricing</a>
+            <a href="#featured" class="btn-pill-glass">See Projects</a>
+          </div>
+
+          <!-- Wave Scroll Line -->
+          <div class="hero-scroll-divider">
+            <span>Scroll down</span>
+            <span class="line"></span>
+            <div class="mouse-pill">
+              <div class="mouse-wheel"></div>
+            </div>
+            <span class="line"></span>
+            <span>to see projects</span>
+          </div>
+
+          <!-- Tech Stack Logo Strip -->
+          <div class="tech-strip-logos">
+            <span class="logo-item">● Vanilla Website (HTML/CSS/JS)</span>
+            <span class="logo-item">◈ Next.js Full Stack Architecture</span>
+            <span class="logo-item">❖ MySQL Relational DB</span>
+            <span class="logo-item">✱ Node.js Runtime</span>
+            <span class="logo-item">✦ Serverless &amp; API Routes</span>
+          </div>
+        </section>
+
+        <!-- SECTION 00 // FOUNDER PROFILE DOSSIER (EXACTLY BETWEEN HERO & FEATURED WORK) -->
+        <section id="profile" class="frame-section">
+          <div class="section-head-centered">
+            <span class="section-pill-tag"
+              >STUDIO FOUNDER // PROFILE DOSSIER</span
+            >
+            <h2 class="section-title-grunge">
+              ADRI AUFA — LAW &amp; ENGINEERING SYNTHESIS
+            </h2>
+          </div>
+
+          <article class="profile-dossier-card">
+            <!-- Left Column: Portrait Photo & Badge -->
+            <div class="profile-photo-wrapper">
+              <img
+                src="adri_aufa_profile.jpeg"
+                onerror="
+                  this.onerror = null;
+                  this.src = 'assets/images/adri_aufa_profile.jpg';
+                "
+                alt="Adri Aufa — Civil Law Student &amp; Software Architect"
+              />
+              <div class="profile-photo-badge">
+                <span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 0.75rem;
+                    color: var(--text-secondary);
+                  "
+                  >SPECIALIZATION:</span
+                >
+                <strong
+                  style="
+                    font-family: var(--font-poster);
+                    font-size: 1.1rem;
+                    color: var(--accent-red);
+                    letter-spacing: 0.04em;
+                  "
+                  >CIVIL LAW &bull; WEB ARCHITECT</strong
+                >
+              </div>
+            </div>
+
+            <!-- Right Column: Full Caption & Synthesis Breakdown -->
+            <div class="profile-bio-content">
+              <div>
+                <span
+                  style="
+                    font-family: var(--font-grunge-alt);
+                    font-size: 1.1rem;
+                    color: var(--accent-red);
+                    display: block;
+                    margin-bottom: 12px;
+                  "
+                  >FOUNDER DOSSIER &amp; VISION</span
+                >
+                <h3 class="profile-tagline-grunge">
+                  BRIDGING <span>LEGAL STRUCTURES</span> &amp; ACCESSIBLE
+                  TECHNOLOGY
+                </h3>
+
+                <p class="profile-caption-p" style="margin-top: 18px">
+                  I am a
+                  <strong
+                    >5th-semester Law student specializing in Civil Law</strong
+                  >, driven by a mission to bridge the gap between complex legal
+                  structures and accessible technology. Believing that software
+                  should empower and serve everyone, I build lightweight,
+                  high-performance web applications designed to solve real-world
+                  problems.
+                </p>
+
+                <p class="profile-caption-p">
+                  My technical stack balances the lightning-fast agility of
+                  <strong
+                    >Vanilla architecture (HTML5, CSS3, Modern
+                    JavaScript)</strong
+                  >
+                  for conversion-focused marketing sites, with the robust
+                  capability of <strong>Next.js and MySQL</strong> for secure,
+                  full-stack web applications. By blending analytical legal
+                  thinking with modern software engineering, I create secure,
+                  user-centric digital assets that deliver clear social and
+                  business impact.
+                </p>
+              </div>
+
+              <div class="profile-specs-strip">
+                <div class="spec-glass-item">
+                  <div class="lbl">ACADEMIC BACKGROUND</div>
+                  <div class="val">5th Semester (Civil Law)</div>
+                </div>
+                <div class="spec-glass-item">
+                  <div class="lbl">1. FRONTEND ARCHITECTURE</div>
+                  <div class="val">Vanilla Website (HTML/CSS/JS)</div>
+                </div>
+                <div class="spec-glass-item">
+                  <div class="lbl">2. FULL STACK SYSTEM</div>
+                  <div class="val">Next.js + MySQL Database</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- SECTION 01 // FEATURED WORK -->
+        <section id="featured" class="frame-section">
+          <div class="section-head-centered">
+            <span class="section-pill-tag">CASE STUDY // FEATURED WORK</span>
+            <h2 class="section-title-grunge">SELECTED STARTUP VENTURE</h2>
+          </div>
+
+          <article class="featured-card-glass">
+            <div class="featured-visual">
+              <img
+                src="assets/images/project1.png"
+                alt="VEXA Platform UI"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80'
+                "
+              />
+            </div>
+
+            <div class="featured-content">
+              <div>
+                <span
+                  style="
+                    font-family: var(--font-grunge-alt);
+                    font-size: 1.1rem;
+                    color: var(--accent-red);
+                    display: block;
+                    margin-bottom: 10px;
+                  "
+                  >FULL STACK WEB APPLICATION</span
+                >
+                <h3 class="feature-title-grunge">
+                  VEXA PLATFORM — ANALYTICS &amp; MANAGEMENT PORTAL
+                </h3>
+                <p class="feature-body-text">
+                  Engineered a comprehensive modern web platform designed for
+                  high-growth tech startups. Built from the ground up without
+                  heavy frontend frameworks to achieve lightning-fast sub-second
+                  render speeds with pure Vanilla JavaScript, backed by a
+                  high-performance Next.js API layer and a robust MySQL database
+                  schema.
+                </p>
+
+                <div class="feature-specs-grid">
+                  <div class="spec-glass-item">
+                    <div class="lbl">1. WEB BUILDING (FRONTEND)</div>
+                    <div class="val">Vanilla Website (HTML, CSS, JS)</div>
+                  </div>
+                  <div class="spec-glass-item">
+                    <div class="lbl">2. FULL STACK WEB ARCHITECTURE</div>
+                    <div class="val">Next.js (React &amp; Server Actions)</div>
+                  </div>
+                  <div class="spec-glass-item">
+                    <div class="lbl">RELATIONAL DATABASE</div>
+                    <div class="val">MySQL Relational Schema</div>
+                  </div>
+                  <div class="spec-glass-item">
+                    <div class="lbl">RENDER VELOCITY</div>
+                    <div class="val">0.4s First Contentful Paint</div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  border-top: 1px solid var(--border-glass);
+                  padding-top: 24px;
+                "
+              >
+                <span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 0.85rem;
+                    color: var(--text-secondary);
+                  "
+                >
+                  STATUS:
+                  <strong style="color: var(--text-primary)"
+                    >PRODUCTION LAUNCHED</strong
+                  >
+                </span>
+                <button
+                  id="openCaseStudyBtn"
+                  class="btn-pill-red"
+                  style="font-size: 1.05rem; padding: 12px 24px"
+                >
+                  Inspect Case Study &rarr;
+                </button>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- SECTION 02 // CONTACT -->
+        <section id="contact" class="frame-section">
+          <div class="contact-glass-grid">
+            <div>
+              <span class="section-pill-tag">LET'S COLLABORATE</span>
+              <h2 class="section-title-grunge" style="margin: 16px 0">
+                START A PROJECT CONVERSATION
+              </h2>
+              <p
+                style="
+                  font-family: var(--font-typewriter);
+                  font-size: 1.05rem;
+                  color: var(--text-secondary);
+                  margin-bottom: 32px;
+                  line-height: 1.7;
+                "
+              >
+                Reach out directly to discuss
+                <strong>Web Building (Vanilla Website)</strong> or
+                <strong>Full Stack Web (MySQL, Next.js)</strong> solutions for
+                your startup.
+              </p>
+              <div
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 0.92rem;
+                  color: var(--text-primary);
+                "
+              >
+                DIRECT EMAIL:
+                <strong style="color: var(--accent-red)"
+                  >adriaufarachman@gmail.com</strong
+                ><br />
+                NODE BASE: <strong>Jakarta, Indonesia (UTC+7 / WIB)</strong>
+              </div>
+            </div>
+
+            <form id="contactForm" class="contact-form-glass">
+              <input
+                type="text"
+                id="clientName"
+                class="input-glass"
+                placeholder="Your Name *"
+                required
+              />
+              <input
+                type="email"
+                id="clientEmail"
+                class="input-glass"
+                placeholder="Your Email Address *"
+                required
+              />
+              <textarea
+                id="clientBrief"
+                class="textarea-glass"
+                placeholder="Tell us about your project scope (Vanilla Website / Next.js &amp; MySQL)..."
+                required
+              ></textarea>
+              <button
+                type="submit"
+                class="btn-pill-red"
+                style="justify-content: center"
+              >
+                Send Message &rarr;
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="frame-footer">
+          <div>
+            <strong style="color: var(--text-primary)">ADRI AUFA</strong> —
+            PORTFOLITE ARCHITECTURE STUDIO
+          </div>
+          <div>
+            WEB BUILDING (VANILLA WEBSITE) • FULL STACK WEB (MYSQL, NEXT.JS) •
+            <a
+              href="pricing.html"
+              style="color: var(--accent-red); text-decoration: underline"
+              >SEE PRICING</a
+            >
+          </div>
+        </footer>
       </div>
+    </main>
 
-      <div class="modal-body">
-        <img src="assets/images/project1.png" alt="VEXA Platform Case Study" style="width:100%;border-radius:16px;border:1px solid var(--border-glass);margin-bottom:24px;" />
-
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px;">
-          <div style="padding:18px;background:rgba(255,255,255,0.03);border:1px solid var(--border-glass);border-radius:16px;">
-            <div style="font-family:var(--font-poster);font-size:2.4rem;color:var(--accent-red);">0.4s</div>
-            <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--text-secondary);">Load Latency</div>
+    <!-- CASE STUDY DOSSIER MODAL -->
+    <div
+      id="caseStudyModal"
+      class="modal-backdrop"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-box">
+        <div class="modal-header">
+          <div
+            style="
+              font-family: var(--font-poster);
+              font-size: 1.45rem;
+              letter-spacing: 0.06em;
+              color: var(--text-primary);
+            "
+          >
+            CASE STUDY // VEXA ENTERPRISE PLATFORM
           </div>
-          <div style="padding:18px;background:rgba(255,255,255,0.03);border:1px solid var(--border-glass);border-radius:16px;">
-            <div style="font-family:var(--font-poster);font-size:2.4rem;color:var(--text-primary);">Vanilla Web</div>
-            <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--text-secondary);">1. Web Building Stack</div>
-          </div>
-          <div style="padding:18px;background:rgba(255,255,255,0.03);border:1px solid var(--border-glass);border-radius:16px;">
-            <div style="font-family:var(--font-poster);font-size:2.4rem;color:var(--text-primary);">Next.js + MySQL</div>
-            <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--text-secondary);">2. Full Stack Web</div>
-          </div>
-        </div>
-
-        <h3 style="font-family:var(--font-grunge-alt);font-size:1.4rem;color:var(--accent-red);margin-bottom:12px;">
-          TECHNICAL APPROACH &amp; SCOPE BREAKDOWN
-        </h3>
-        <p style="font-family:var(--font-typewriter);font-size:1rem;color:var(--text-secondary);line-height:1.75;margin-bottom:24px;">
-          VEXA Platform exemplifies our core engineering scopes: <strong>1. Web Building (Vanilla Website)</strong> designed with clean, zero-dependency HTML5, CSS3, and JavaScript modules for instant sub-second rendering, paired with <strong>2. Full Stack Web Architecture</strong> utilizing a <strong>Next.js full-stack framework</strong> and optimized <strong>MySQL relational databases</strong>.
-        </p>
-
-        <div style="text-align:right;">
-          <button onclick="document.getElementById('caseStudyModal').classList.remove('open')" class="btn-pill-red" style="padding:12px 28px;">
-            Close Case Study
+          <button
+            id="closeModalBtn"
+            class="btn-close-modal"
+            aria-label="Close Modal"
+          >
+            ✕
           </button>
         </div>
+
+        <div class="modal-body">
+          <img
+            src="assets/images/project1.png"
+            alt="VEXA Platform Case Study"
+            style="
+              width: 100%;
+              border-radius: 16px;
+              border: 1px solid var(--border-glass);
+              margin-bottom: 24px;
+            "
+          />
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 16px;
+              margin-bottom: 28px;
+            "
+          >
+            <div
+              style="
+                padding: 18px;
+                background: rgba(255, 255, 255, 0.03);
+                border: 1px solid var(--border-glass);
+                border-radius: 16px;
+              "
+            >
+              <div
+                style="
+                  font-family: var(--font-poster);
+                  font-size: 2.4rem;
+                  color: var(--accent-red);
+                "
+              >
+                0.4s
+              </div>
+              <div
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 0.75rem;
+                  color: var(--text-secondary);
+                "
+              >
+                Load Latency
+              </div>
+            </div>
+            <div
+              style="
+                padding: 18px;
+                background: rgba(255, 255, 255, 0.03);
+                border: 1px solid var(--border-glass);
+                border-radius: 16px;
+              "
+            >
+              <div
+                style="
+                  font-family: var(--font-poster);
+                  font-size: 2.4rem;
+                  color: var(--text-primary);
+                "
+              >
+                Vanilla Web
+              </div>
+              <div
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 0.75rem;
+                  color: var(--text-secondary);
+                "
+              >
+                1. Web Building Stack
+              </div>
+            </div>
+            <div
+              style="
+                padding: 18px;
+                background: rgba(255, 255, 255, 0.03);
+                border: 1px solid var(--border-glass);
+                border-radius: 16px;
+              "
+            >
+              <div
+                style="
+                  font-family: var(--font-poster);
+                  font-size: 2.4rem;
+                  color: var(--text-primary);
+                "
+              >
+                Next.js + MySQL
+              </div>
+              <div
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 0.75rem;
+                  color: var(--text-secondary);
+                "
+              >
+                2. Full Stack Web
+              </div>
+            </div>
+          </div>
+
+          <h3
+            style="
+              font-family: var(--font-grunge-alt);
+              font-size: 1.4rem;
+              color: var(--accent-red);
+              margin-bottom: 12px;
+            "
+          >
+            TECHNICAL APPROACH &amp; SCOPE BREAKDOWN
+          </h3>
+          <p
+            style="
+              font-family: var(--font-typewriter);
+              font-size: 1rem;
+              color: var(--text-secondary);
+              line-height: 1.75;
+              margin-bottom: 24px;
+            "
+          >
+            VEXA Platform exemplifies our core engineering scopes:
+            <strong>1. Web Building (Vanilla Website)</strong> designed with
+            clean, zero-dependency HTML5, CSS3, and JavaScript modules for
+            instant sub-second rendering, paired with
+            <strong>2. Full Stack Web Architecture</strong> utilizing a
+            <strong>Next.js full-stack framework</strong> and optimized
+            <strong>MySQL relational databases</strong>.
+          </p>
+
+          <div style="text-align: right">
+            <button
+              onclick="
+                document
+                  .getElementById('caseStudyModal')
+                  .classList.remove('open')
+              "
+              class="btn-pill-red"
+              style="padding: 12px 28px"
+            >
+              Close Case Study
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- TOAST ALERT -->
-  <div id="toastAlert" class="toast">
-    <span id="toastMessage">MESSAGE RECEIVED</span>
-  </div>
+    <!-- TOAST ALERT -->
+    <div id="toastAlert" class="toast">
+      <span id="toastMessage">MESSAGE RECEIVED</span>
+    </div>
 
-  <script src="js/app.js"></script>
-</body>
+    <script src="js/app.js"></script>
+  </body>
 </html>
