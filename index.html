@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ADRI AUFA — Portfolite Noir Studio</title>
+    <title>Adri Aufa Rachman — Portfolio</title>
     <meta
       name="description"
       content="Sleek Portfolite Noir Template combined with striking Editorial Serif Typography. Specializing in Web Building (Vanilla Website) and Full Stack Web (MySQL, Next.js)."
@@ -269,87 +269,112 @@
             <h2 class="section-title-grunge">SELECTED STARTUP VENTURE</h2>
           </div>
 
-          <article class="featured-card-glass">
-            <div class="featured-visual">
-              <img
-                src="assets/images/project1.png"
-                alt="VEXA Platform UI"
-                onerror="
-                  this.src =
-                    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80'
+          <!-- COMPACT FEATURED CARD WITH 2 PHOTO SLOTS -->
+          <article class="featured-compact-card">
+            <div>
+              <span
+                style="
+                  font-family: var(--font-grunge-alt);
+                  font-size: 0.95rem;
+                  color: var(--accent-red);
+                  display: block;
+                  margin-bottom: 6px;
                 "
-              />
+                >MICRO-SAAS // AI LEGAL TECH ENGINE</span
+              >
+              <h3 class="feature-title-grunge">
+                GORDON CASEBOOK — AI CASE BRIEF &amp; RISK ENGINE
+              </h3>
+              <p class="feature-body-text">
+                Engineered an AI-powered legal synthesis platform tailored for
+                law students and practicing attorneys across
+                <strong>Common Law Jurisdictions</strong>. Built to transform
+                hours of court document review into structured
+                <strong>IRAC Case Briefs</strong> and actionable
+                <strong>Risk Mitigation</strong> summaries in seconds.
+                Architected on <strong>Laravel (PHP)</strong> and
+                <strong>MySQL</strong>, integrated with
+                <strong>OpenAI API</strong>.
+              </p>
             </div>
 
-            <div class="featured-content">
-              <div>
-                <span
-                  style="
-                    font-family: var(--font-grunge-alt);
-                    font-size: 1.1rem;
-                    color: var(--accent-red);
-                    display: block;
-                    margin-bottom: 10px;
-                  "
-                  >FULL STACK WEB APPLICATION</span
-                >
-                <h3 class="feature-title-grunge">
-                  VEXA PLATFORM — ANALYTICS &amp; MANAGEMENT PORTAL
-                </h3>
-                <p class="feature-body-text">
-                  Engineered a comprehensive modern web platform designed for
-                  high-growth tech startups. Built from the ground up without
-                  heavy frontend frameworks to achieve lightning-fast sub-second
-                  render speeds with pure Vanilla JavaScript, backed by a
-                  high-performance Next.js API layer and a robust MySQL database
-                  schema.
-                </p>
-
-                <div class="feature-specs-grid">
-                  <div class="spec-glass-item">
-                    <div class="lbl">1. WEB BUILDING (FRONTEND)</div>
-                    <div class="val">Vanilla Website (HTML, CSS, JS)</div>
-                  </div>
-                  <div class="spec-glass-item">
-                    <div class="lbl">2. FULL STACK WEB ARCHITECTURE</div>
-                    <div class="val">Next.js (React &amp; Server Actions)</div>
-                  </div>
-                  <div class="spec-glass-item">
-                    <div class="lbl">RELATIONAL DATABASE</div>
-                    <div class="val">MySQL Relational Schema</div>
-                  </div>
-                  <div class="spec-glass-item">
-                    <div class="lbl">RENDER VELOCITY</div>
-                    <div class="val">0.4s First Contentful Paint</div>
-                  </div>
-                </div>
+            <!-- 2 KODE FOTO // TEMPAT MASUKKAN 2 FOTO / SCREENSHOT PROYEK -->
+            <div class="gordon-dual-photos">
+              <!-- KODE FOTO 1: Masukkan path/nama foto pertama pada src di bawah ini -->
+              <div class="photo-slot-glass">
+                <img
+                  id="gordonPhoto1"
+                  src="gordon-casebook-project (1).png"
+                  alt="Gordon Casebook - Foto 1"
+                />
               </div>
 
-              <div
+              <!-- KODE FOTO 2: Masukkan path/nama foto kedua pada src di bawah ini -->
+              <div class="photo-slot-glass">
+                <img
+                  id="gordonPhoto2"
+                  src="gordon-casebook-project (2).png"
+                  alt="Gordon Casebook - Foto 2"
+                />
+              </div>
+            </div>
+
+            <div class="feature-specs-grid">
+              <div class="spec-glass-item">
+                <div class="lbl">1. BACKEND ARCHITECTURE</div>
+                <div class="val">Laravel (PHP)</div>
+              </div>
+              <div class="spec-glass-item">
+                <div class="lbl">2. AI SYNTHESIS LAYER</div>
+                <div class="val">OpenAI API (IRAC)</div>
+              </div>
+              <div class="spec-glass-item">
+                <div class="lbl">DATABASE</div>
+                <div class="val">MySQL Schema</div>
+              </div>
+              <div class="spec-glass-item">
+                <div class="lbl">JURISDICTION</div>
+                <div class="val">Common Law</div>
+              </div>
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-top: 1px solid var(--border-glass);
+                padding-top: 18px;
+                flex-wrap: wrap;
+                gap: 12px;
+              "
+            >
+              <span
                 style="
-                  display: flex;
-                  align-items: center;
-                  justify-content: space-between;
-                  border-top: 1px solid var(--border-glass);
-                  padding-top: 24px;
+                  font-family: var(--font-mono);
+                  font-size: 0.85rem;
+                  color: var(--text-secondary);
                 "
               >
-                <span
-                  style="
-                    font-family: var(--font-mono);
-                    font-size: 0.85rem;
-                    color: var(--text-secondary);
-                  "
+                STATUS:
+                <strong style="color: var(--accent-red)"
+                  >UNDER MAINTENANCE (FLY.IO)</strong
                 >
-                  STATUS:
-                  <strong style="color: var(--text-primary)"
-                    >PRODUCTION LAUNCHED</strong
-                  >
-                </span>
+              </span>
+              <div style="display: flex; gap: 12px; align-items: center">
+                <a
+                  href="https://micro-saas.fly.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-pill-glass"
+                  style="font-size: 0.95rem; padding: 10px 18px"
+                >
+                  Visit Live SaaS &rarr;
+                </a>
                 <button
                   id="openCaseStudyBtn"
                   class="btn-pill-red"
-                  style="font-size: 1.05rem; padding: 12px 24px"
+                  style="font-size: 0.95rem; padding: 10px 18px"
                 >
                   Inspect Case Study &rarr;
                 </button>
@@ -383,22 +408,38 @@
               <div
                 style="
                   font-family: var(--font-mono);
-                  font-size: 0.92rem;
+                  font-size: 0.95rem;
                   color: var(--text-primary);
+                  line-height: 1.85;
                 "
               >
-                DIRECT EMAIL:
-                <strong style="color: var(--accent-red)"
-                  >adriaufarachman@gmail.com</strong
+                <a
+                  href="https://www.linkedin.com/in/adri-aufa-rachman-b0b3172a9/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-social-link"
+                  >LinkedIn</a
                 ><br />
-                NODE BASE: <strong>Jakarta, Indonesia (UTC+7 / WIB)</strong>
+                <a
+                  href="https://www.instagram.com/adriaufarachmann/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-social-link"
+                  >Instagram</a
+                >
               </div>
             </div>
 
-            <form id="contactForm" class="contact-form-glass">
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/mdaqkevj"
+              method="POST"
+              class="contact-form-glass"
+            >
               <input
                 type="text"
                 id="clientName"
+                name="name"
                 class="input-glass"
                 placeholder="Your Name *"
                 required
@@ -406,12 +447,14 @@
               <input
                 type="email"
                 id="clientEmail"
+                name="email"
                 class="input-glass"
                 placeholder="Your Email Address *"
                 required
               />
               <textarea
                 id="clientBrief"
+                name="message"
                 class="textarea-glass"
                 placeholder="Tell us about your project scope (Vanilla Website / Next.js &amp; MySQL)..."
                 required
@@ -462,7 +505,7 @@
               color: var(--text-primary);
             "
           >
-            CASE STUDY // VEXA ENTERPRISE PLATFORM
+            CASE STUDY // GORDON CASEBOOK (AI LEGAL ENGINE)
           </div>
           <button
             id="closeModalBtn"
@@ -474,16 +517,30 @@
         </div>
 
         <div class="modal-body">
-          <img
-            src="assets/images/project1.png"
-            alt="VEXA Platform Case Study"
-            style="
-              width: 100%;
-              border-radius: 16px;
-              border: 1px solid var(--border-glass);
-              margin-bottom: 24px;
-            "
-          />
+          <!-- 2 KODE FOTO MODAL // TEMPAT MASUKKAN 2 FOTO DI DALAM MODAL CASE STUDY -->
+          <div class="gordon-dual-photos" style="margin-bottom: 24px">
+            <!-- KODE FOTO 1 (MODAL): Masukkan path/nama foto pertama pada src di bawah ini -->
+            <div class="photo-slot-glass" style="height: 220px">
+              <img
+                id="modalGordonPhoto1"
+                src="gordon-casebook-project (1).png"
+                alt="Gordon Casebook Case Study - Foto 1"
+                class="clickable-photo"
+                style="cursor: zoom-in;"
+              />
+            </div>
+
+            <!-- KODE FOTO 2 (MODAL): Masukkan path/nama foto kedua pada src di bawah ini -->
+            <div class="photo-slot-glass" style="height: 220px">
+              <img
+                id="modalGordonPhoto2"
+                src="gordon-casebook-project (2).png"
+                alt="Gordon Casebook Case Study - Foto 2"
+                class="clickable-photo"
+                style="cursor: zoom-in;"
+              />
+            </div>
+          </div>
 
           <div
             style="
@@ -508,7 +565,7 @@
                   color: var(--accent-red);
                 "
               >
-                0.4s
+                Seconds
               </div>
               <div
                 style="
@@ -517,7 +574,7 @@
                   color: var(--text-secondary);
                 "
               >
-                Load Latency
+                IRAC Brief Generation vs. Hours
               </div>
             </div>
             <div
@@ -535,7 +592,7 @@
                   color: var(--text-primary);
                 "
               >
-                Vanilla Web
+                Laravel + MySQL
               </div>
               <div
                 style="
@@ -544,7 +601,7 @@
                   color: var(--text-secondary);
                 "
               >
-                1. Web Building Stack
+                1. Backend Architecture Stack
               </div>
             </div>
             <div
@@ -562,7 +619,7 @@
                   color: var(--text-primary);
                 "
               >
-                Next.js + MySQL
+                OpenAI API
               </div>
               <div
                 style="
@@ -571,7 +628,7 @@
                   color: var(--text-secondary);
                 "
               >
-                2. Full Stack Web
+                2. Legal Synthesis Engine
               </div>
             </div>
           </div>
@@ -584,7 +641,7 @@
               margin-bottom: 12px;
             "
           >
-            TECHNICAL APPROACH &amp; SCOPE BREAKDOWN
+            TECHNICAL APPROACH &amp; LEGAL SYNTHESIS BREAKDOWN
           </h3>
           <p
             style="
@@ -595,16 +652,47 @@
               margin-bottom: 24px;
             "
           >
-            VEXA Platform exemplifies our core engineering scopes:
-            <strong>1. Web Building (Vanilla Website)</strong> designed with
-            clean, zero-dependency HTML5, CSS3, and JavaScript modules for
-            instant sub-second rendering, paired with
-            <strong>2. Full Stack Web Architecture</strong> utilizing a
-            <strong>Next.js full-stack framework</strong> and optimized
-            <strong>MySQL relational databases</strong>.
+            <strong>Gordon Casebook</strong> represents the pinnacle of Adri
+            Aufa's unique dual expertise as a
+            <strong>Civil Law student</strong> and
+            <strong>Software Architect</strong>. Designed specifically for law
+            students and practicing attorneys in
+            <strong>Common Law Jurisdictions</strong>, this Micro-SaaS
+            automatically extracts critical case insights and constructs
+            standardized <strong>IRAC Case Briefs</strong> (Issue, Rule,
+            Analysis/Application, Conclusion) alongside structured
+            <strong>Legal Risk Mitigation</strong> frameworks from pasted text
+            or uploaded PDF court files up to 10MB. <br /><br />
+            Architected using the robust
+            <strong>Laravel PHP framework</strong> for secure routing and
+            document handling, normalized with a
+            <strong>MySQL database</strong> for state management, and integrated
+            directly with custom <strong>OpenAI API prompt pipelines</strong> to
+            ensure high legal domain precision. Currently deployed on
+            high-performance
+            <strong>Fly.io cloud infrastructure</strong>
+            (<code>https://micro-saas.fly.dev/</code>) and undergoing scheduled
+            maintenance upgrades.
           </p>
 
-          <div style="text-align: right">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              flex-wrap: wrap;
+              gap: 12px;
+            "
+          >
+            <a
+              href="https://micro-saas.fly.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-pill-glass"
+              style="padding: 12px 24px; font-size: 0.95rem"
+            >
+              Visit Live SaaS Engine &rarr;
+            </a>
             <button
               onclick="
                 document
@@ -618,6 +706,31 @@
             </button>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- PHOTO ZOOM LIGHTBOX MODAL // UNTUK MEMPERBESAR / INSPECT FOTO PROYEK -->
+    <div id="photoZoomLightbox" style="position: fixed; inset: 0; width: 100vw; height: 100vh; background: rgba(5, 5, 8, 0.94); backdrop-filter: blur(16px); z-index: 999999; display: none; align-items: center; justify-content: center; padding: 24px;">
+      <div style="position: relative; max-width: 90vw; max-height: 88vh; display: flex; align-items: center; justify-content: center;">
+        <button id="closePhotoZoomBtn" class="btn-close-modal" style="position: absolute; top: -16px; right: -16px; z-index: 1000000; background: var(--accent-red); color: white; border: none; width: 42px; height: 42px; border-radius: 50%; font-size: 1.25rem; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.6);">✕</button>
+        <img id="zoomedPhotoImg" src="" alt="Zoomed Project Photo" style="max-width: 88vw; max-height: 84vh; border-radius: 16px; border: 1px solid var(--border-glass); box-shadow: 0 30px 80px rgba(0,0,0,0.95); object-fit: contain; background: #0c0c10;" />
+      </div>
+    </div>
+
+    <!-- FORMSPREE SUCCESS POPUP MODAL -->
+    <div id="formspreeSuccessModal" style="position: fixed; inset: 0; width: 100vw; height: 100vh; background: rgba(5, 5, 8, 0.94); backdrop-filter: blur(16px); z-index: 999999; display: none; align-items: center; justify-content: center; padding: 24px;">
+      <div style="position: relative; max-width: 520px; width: 100%; background: var(--bg-frame); border: 1px solid var(--border-light); border-radius: 20px; padding: 36px 32px; text-align: center; box-shadow: 0 30px 80px rgba(0,0,0,0.95);">
+        <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(230, 28, 28, 0.15); color: var(--accent-red); font-size: 2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: bold;">
+          ✓
+        </div>
+        <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--text-primary); margin-bottom: 12px;">Message Successfully Sent!</h3>
+        <p style="font-family: var(--font-typewriter); font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
+          Thank you for reaching out. Your project consultation has been securely transmitted to <strong style="color: var(--text-primary);">adriaufarachman@gmail.com</strong>.<br /><br />
+          We will review your project details and get back to you shortly.
+        </p>
+        <button id="closeFormspreeSuccessBtn" class="btn-pill-red" style="padding: 14px 36px; width: 100%; justify-content: center; font-size: 1rem;">
+          Close &amp; Return to Portfolio
+        </button>
       </div>
     </div>
 

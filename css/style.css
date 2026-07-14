@@ -731,62 +731,86 @@ html[data-theme="dark"] .grunge-hero-headline {
 /* ==========================================================================
    FEATURED VENTURE CARD
    ========================================================================== */
-.featured-card-glass {
+/* Compact Sleek Featured Card Layout */
+.featured-card-glass,
+.featured-compact-card {
   background: var(--bg-card);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-card);
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  overflow: hidden;
+  padding: clamp(24px, 4vw, 36px);
   backdrop-filter: blur(16px);
   box-shadow: var(--card-shadow);
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
 
-.featured-visual {
-  border-right: 1px solid var(--border-glass);
+/* Dual Photo Display (2 Foto Slots) */
+.gordon-dual-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 8px 0 4px;
+}
+
+.photo-slot-glass {
+  background: rgba(10, 10, 14, 0.6);
+  border: 1px solid var(--border-glass);
+  border-radius: 14px;
+  overflow: hidden;
   position: relative;
-  min-height: 440px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.featured-visual img {
+.photo-slot-glass img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
+  transition: transform 0.35s ease;
+}
+
+.photo-slot-glass:hover img {
+  transform: scale(1.03);
 }
 
 .featured-content {
-  padding: 48px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 16px;
 }
 
 .feature-title-grunge {
   font-family: var(--font-grunge-main);
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
   letter-spacing: -0.015em;
   color: var(--text-primary);
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .feature-body-text {
   font-family: var(--font-typewriter);
-  font-size: 1.02rem;
+  font-size: 0.98rem;
   color: var(--text-secondary);
-  line-height: 1.75;
-  margin-bottom: 28px;
+  line-height: 1.7;
+  margin-bottom: 12px;
 }
 
 .feature-specs-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-bottom: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 8px;
 }
 
 .spec-glass-item {
-  padding: 14px;
+  padding: 12px 14px;
   background: var(--bg-pill);
   border: 1px solid var(--border-glass);
   border-radius: 12px;
@@ -802,7 +826,7 @@ html[data-theme="dark"] .grunge-hero-headline {
 .spec-glass-item .val {
   font-family: var(--font-poster);
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--text-primary);
   margin-top: 4px;
 }
@@ -906,6 +930,18 @@ html[data-theme="dark"] .grunge-hero-headline {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+}
+
+.contact-social-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.25s ease;
+  display: inline-block;
+}
+
+.contact-social-link:hover {
+  color: var(--accent-red);
 }
 
 .contact-form-glass {

@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initJakartaClock();
   initCaseStudyModal();
+  initPhotoZoomLightbox();
   initPortfoliteEstimator();
   initDispatchForm();
 });
@@ -222,6 +223,55 @@ function initCaseStudyModal() {
 }
 
 /* ==========================================================================
+   4.5. PHOTO ZOOM LIGHTBOX (CLICK ANY PROJECT PHOTO TO INSPECT/ZOOM)
+   ========================================================================== */
+function initPhotoZoomLightbox() {
+  const lightbox = document.getElementById('photoZoomLightbox');
+  const zoomedImg = document.getElementById('zoomedPhotoImg');
+  const closeBtn = document.getElementById('closePhotoZoomBtn');
+
+  if (!lightbox || !zoomedImg) return;
+
+  function openLightbox(imgSrc, imgAlt) {
+    zoomedImg.src = imgSrc;
+    zoomedImg.alt = imgAlt || 'Zoomed Photo';
+    lightbox.style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    lightbox.style.display = 'none';
+    zoomedImg.src = '';
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeLightbox();
+    });
+  }
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target === zoomedImg) {
+      closeLightbox();
+    }
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+      e.stopPropagation();
+      closeLightbox();
+    }
+  });
+
+  document.querySelectorAll('.clickable-photo').forEach(photo => {
+    photo.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openLightbox(photo.src, photo.alt);
+    });
+  });
+}
+
+/* ==========================================================================
    5. PORTFOLITE PROJECT ESTIMATOR
    ========================================================================== */
 function initPortfoliteEstimator() {
@@ -282,23 +332,75 @@ function initPortfoliteEstimator() {
    ========================================================================== */
 function initDispatchForm() {
   const form = document.getElementById('contactForm');
+  const successModal = document.getElementById('formspreeSuccessModal');
+  const closeSuccessBtn = document.getElementById('closeFormspreeSuccessBtn');
+
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  function closeSuccessModal() {
+    if (successModal) successModal.style.display = 'none';
+  }
+
+  if (closeSuccessBtn && successModal) {
+    closeSuccessBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeSuccessModal();
+    });
+
+    successModal.addEventListener('click', (e) => {
+      if (e.target === successModal) closeSuccessModal();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && successModal.style.display === 'flex') {
+        e.stopPropagation();
+        closeSuccessModal();
+      }
+    });
+  }
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const nameInput = document.getElementById('clientName');
 
     const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = 'TRANSMITTING...';
-    submitBtn.disabled = true;
+    const originalText = submitBtn ? submitBtn.innerHTML : 'Send Message &rarr;';
+    if (submitBtn) {
+      submitBtn.innerHTML = 'TRANSMITTING...';
+      submitBtn.disabled = true;
+    }
 
-    setTimeout(() => {
-      submitBtn.innerHTML = originalText;
-      submitBtn.disabled = false;
-      form.reset();
-      showToast(`MESSAGE RECEIVED! THANK YOU, ${nameInput ? nameInput.value.toUpperCase() : 'VISITOR'}.`);
-    }, 900);
+    try {
+      const response = await fetch(form.action, {
+        method: form.method || 'POST',
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        form.reset();
+        if (successModal) {
+          successModal.style.display = 'flex';
+        } else {
+          showToast('MESSAGE SENT SUCCESSFULLY TO ADRIAUFARACHMAN@GMAIL.COM!');
+        }
+      } else {
+        const data = await response.json().catch(() => ({}));
+        if (data && data.errors) {
+          showToast(`ERROR: ${data.errors.map(err => err.message).join(', ')}`);
+        } else {
+          showToast('TRANSMISSION ERROR: COULD NOT SEND MESSAGE. PLEASE TRY AGAIN.');
+        }
+      }
+    } catch (error) {
+      showToast('NETWORK ERROR: PLEASE CHECK YOUR CONNECTION AND TRY AGAIN.');
+    } finally {
+      if (submitBtn) {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }
+    }
   });
 }
 
