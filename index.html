@@ -36,7 +36,7 @@
         <header class="template-navbar">
           <a href="#top" class="brand-pill">
             <div class="brand-icon">AA</div>
-            <span class="brand-name">ADRI AUFA</span>
+            <span class="brand-name">ADRI AUFA RACHMAN</span>
           </a>
 
           <!-- Center Nav Links (Hidden on Mobile) -->
@@ -473,8 +473,10 @@
         <!-- FOOTER -->
         <footer class="frame-footer">
           <div>
-            <strong style="color: var(--text-primary)">ADRI AUFA</strong> —
-            PORTFOLITE ARCHITECTURE STUDIO
+            <strong style="color: var(--text-primary)"
+              >ADRI AUFA RACHMAN</strong
+            >
+            — PORTFOLITE ARCHITECTURE STUDIO
           </div>
           <div>
             WEB BUILDING (VANILLA WEBSITE) • FULL STACK WEB (MYSQL, NEXT.JS) •
@@ -526,7 +528,7 @@
                 src="gordon-casebook-project (1).png"
                 alt="Gordon Casebook Case Study - Foto 1"
                 class="clickable-photo"
-                style="cursor: zoom-in;"
+                style="cursor: zoom-in"
               />
             </div>
 
@@ -537,7 +539,7 @@
                 src="gordon-casebook-project (2).png"
                 alt="Gordon Casebook Case Study - Foto 2"
                 class="clickable-photo"
-                style="cursor: zoom-in;"
+                style="cursor: zoom-in"
               />
             </div>
           </div>
@@ -710,25 +712,156 @@
     </div>
 
     <!-- PHOTO ZOOM LIGHTBOX MODAL // UNTUK MEMPERBESAR / INSPECT FOTO PROYEK -->
-    <div id="photoZoomLightbox" style="position: fixed; inset: 0; width: 100vw; height: 100vh; background: rgba(5, 5, 8, 0.94); backdrop-filter: blur(16px); z-index: 999999; display: none; align-items: center; justify-content: center; padding: 24px;">
-      <div style="position: relative; max-width: 90vw; max-height: 88vh; display: flex; align-items: center; justify-content: center;">
-        <button id="closePhotoZoomBtn" class="btn-close-modal" style="position: absolute; top: -16px; right: -16px; z-index: 1000000; background: var(--accent-red); color: white; border: none; width: 42px; height: 42px; border-radius: 50%; font-size: 1.25rem; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.6);">✕</button>
-        <img id="zoomedPhotoImg" src="" alt="Zoomed Project Photo" style="max-width: 88vw; max-height: 84vh; border-radius: 16px; border: 1px solid var(--border-glass); box-shadow: 0 30px 80px rgba(0,0,0,0.95); object-fit: contain; background: #0c0c10;" />
+    <div
+      id="photoZoomLightbox"
+      style="
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(5, 5, 8, 0.94);
+        backdrop-filter: blur(16px);
+        z-index: 999999;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      "
+    >
+      <div
+        style="
+          position: relative;
+          max-width: 90vw;
+          max-height: 88vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <button
+          id="closePhotoZoomBtn"
+          class="btn-close-modal"
+          style="
+            position: absolute;
+            top: -16px;
+            right: -16px;
+            z-index: 1000000;
+            background: var(--accent-red);
+            color: white;
+            border: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            font-size: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+          "
+        >
+          ✕
+        </button>
+        <img
+          id="zoomedPhotoImg"
+          src=""
+          alt="Zoomed Project Photo"
+          style="
+            max-width: 88vw;
+            max-height: 84vh;
+            border-radius: 16px;
+            border: 1px solid var(--border-glass);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95);
+            object-fit: contain;
+            background: #0c0c10;
+          "
+        />
       </div>
     </div>
 
     <!-- FORMSPREE SUCCESS POPUP MODAL -->
-    <div id="formspreeSuccessModal" style="position: fixed; inset: 0; width: 100vw; height: 100vh; background: rgba(5, 5, 8, 0.94); backdrop-filter: blur(16px); z-index: 999999; display: none; align-items: center; justify-content: center; padding: 24px;">
-      <div style="position: relative; max-width: 520px; width: 100%; background: var(--bg-frame); border: 1px solid var(--border-light); border-radius: 20px; padding: 36px 32px; text-align: center; box-shadow: 0 30px 80px rgba(0,0,0,0.95);">
-        <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(230, 28, 28, 0.15); color: var(--accent-red); font-size: 2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: bold;">
+    <div
+      id="formspreeSuccessModal"
+      style="
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(5, 5, 8, 0.94);
+        backdrop-filter: blur(16px);
+        z-index: 999999;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      "
+    >
+      <div
+        style="
+          position: relative;
+          max-width: 520px;
+          width: 100%;
+          background: var(--bg-frame);
+          border: 1px solid var(--border-light);
+          border-radius: 20px;
+          padding: 36px 32px;
+          text-align: center;
+          box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95);
+        "
+      >
+        <div
+          style="
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: rgba(230, 28, 28, 0.15);
+            color: var(--accent-red);
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-weight: bold;
+          "
+        >
           ✓
         </div>
-        <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--text-primary); margin-bottom: 12px;">Message Successfully Sent!</h3>
-        <p style="font-family: var(--font-typewriter); font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
-          Thank you for reaching out. Your project consultation has been securely transmitted to <strong style="color: var(--text-primary);">adriaufarachman@gmail.com</strong>.<br /><br />
+        <h3
+          style="
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+          "
+        >
+          Message Successfully Sent!
+        </h3>
+        <p
+          style="
+            font-family: var(--font-typewriter);
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 24px;
+          "
+        >
+          Thank you for reaching out. Your project consultation has been
+          securely transmitted to
+          <strong style="color: var(--text-primary)"
+            >adriaufarachman@gmail.com</strong
+          >.<br /><br />
           We will review your project details and get back to you shortly.
         </p>
-        <button id="closeFormspreeSuccessBtn" class="btn-pill-red" style="padding: 14px 36px; width: 100%; justify-content: center; font-size: 1rem;">
+        <button
+          id="closeFormspreeSuccessBtn"
+          class="btn-pill-red"
+          style="
+            padding: 14px 36px;
+            width: 100%;
+            justify-content: center;
+            font-size: 1rem;
+          "
+        >
           Close &amp; Return to Portfolio
         </button>
       </div>
