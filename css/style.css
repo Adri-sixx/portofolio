@@ -649,10 +649,12 @@ html[data-theme="dark"] .grunge-hero-headline {
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-card);
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 280px 1fr;
   overflow: hidden;
   backdrop-filter: blur(16px);
   box-shadow: var(--card-shadow);
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .profile-photo-wrapper {
@@ -666,39 +668,41 @@ html[data-theme="dark"] .grunge-hero-headline {
 .profile-photo-wrapper img {
   width: 100%;
   height: 100%;
-  min-height: 480px;
+  min-height: 340px;
   object-fit: cover;
   object-position: center 25%;
 }
 
 .profile-photo-badge {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  padding: 12px 18px;
-  background: rgba(10, 10, 14, 0.88);
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  padding: 10px 14px;
+  background: rgba(10, 10, 14, 0.92);
   border: 1px solid var(--accent-red);
-  border-radius: 14px;
+  border-radius: 12px;
   backdrop-filter: blur(12px);
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  gap: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
 }
 
 .profile-bio-content {
-  padding: 48px;
+  padding: clamp(24px, 3.5vw, 36px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 28px;
+  gap: 20px;
 }
 
 .profile-tagline-grunge {
   font-family: var(--font-grunge-main);
   font-weight: 800;
-  font-size: clamp(1.9rem, 2.4vw, 2.5rem);
+  font-size: clamp(1.6rem, 2vw, 2.1rem);
   letter-spacing: -0.025em;
   color: var(--text-primary);
   line-height: 1.22;
@@ -710,9 +714,9 @@ html[data-theme="dark"] .grunge-hero-headline {
 
 .profile-caption-p {
   font-family: var(--font-typewriter);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
-  line-height: 1.82;
+  line-height: 1.75;
 }
 
 .profile-caption-p strong {
@@ -723,9 +727,29 @@ html[data-theme="dark"] .grunge-hero-headline {
 .profile-specs-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 12px;
   border-top: 1px solid var(--border-glass);
-  padding-top: 28px;
+  padding-top: 20px;
+}
+
+.profile-specs-strip .spec-glass-item {
+  padding: 11px 13px;
+  min-height: 62px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.profile-specs-strip .spec-glass-item .lbl {
+  font-size: 0.64rem;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.profile-specs-strip .spec-glass-item .val {
+  font-size: 0.86rem;
+  margin-top: 3px;
+  line-height: 1.25;
 }
 
 /* ==========================================================================
@@ -856,7 +880,7 @@ html[data-theme="dark"] .grunge-hero-headline {
 }
 
 .option-card-glass {
-  padding: 20px 24px;
+  padding: 22px 26px;
   background: var(--bg-card);
   border: 1px solid var(--border-glass);
   border-radius: 16px;
@@ -864,7 +888,13 @@ html[data-theme="dark"] .grunge-hero-headline {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
   transition: all var(--transition-fast);
+}
+
+.option-card-glass > div:first-child {
+  flex: 1;
+  padding-right: 16px;
 }
 
 .option-card-glass:hover {
@@ -880,22 +910,26 @@ html[data-theme="dark"] .grunge-hero-headline {
 .option-name-grunge {
   font-family: var(--font-grunge-main);
   font-weight: 700;
-  font-size: 1.55rem;
+  font-size: 1.5rem;
   color: var(--text-primary);
 }
 
 .option-sub-type {
   font-family: var(--font-typewriter);
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--text-secondary);
-  margin-top: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
 }
 
 .option-price-tag {
   font-family: var(--font-poster);
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.35rem;
   color: var(--accent-red);
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-align: right;
 }
 
 .estimator-readout-card {

@@ -281,11 +281,14 @@ function initPortfoliteEstimator() {
   const costEl = document.getElementById('estimateCostDisplay');
   const timeEl = document.getElementById('estimateTimelineDisplay');
   const stackEl = document.getElementById('estimateStackDisplay');
+  const noteEl = document.getElementById('estimateNoteDisplay');
 
   let basePrice = 3500;
+  let selectedPriceStr = '$3,500 - $6,000';
   let speedMultiplier = 1.0;
   let selectedWeeks = '4 - 6 Weeks Delivery';
   let selectedStack = 'Full Stack Web (Next.js + MySQL + Vanilla JS)';
+  let selectedNote = '*Base rate starts at $3,500. Total cost ranges up to $6,000 depending on your custom requirements.';
 
   function attachSelection(cards, group) {
     cards.forEach(card => {
@@ -294,9 +297,17 @@ function initPortfoliteEstimator() {
         card.classList.add('selected');
 
         if (group === 'scope') {
+          if (card.hasAttribute('data-price-str') || card.hasAttribute('data-idr-price')) {
+            selectedPriceStr = card.getAttribute('data-price-str') || card.getAttribute('data-idr-price');
+          } else {
+            selectedPriceStr = null;
+          }
           basePrice = parseInt(card.getAttribute('data-price') || 3500);
           selectedWeeks = card.getAttribute('data-weeks') || '4 - 6 Weeks Delivery';
           selectedStack = card.getAttribute('data-stack') || 'Next.js + MySQL + Vanilla JS';
+          if (card.hasAttribute('data-note')) {
+            selectedNote = card.getAttribute('data-note');
+          }
         } else if (group === 'speed') {
           speedMultiplier = parseFloat(card.getAttribute('data-mult') || 1.0);
         }
@@ -310,18 +321,50 @@ function initPortfoliteEstimator() {
   attachSelection(speedCards, 'speed');
 
   function recalculate() {
-    const total = Math.round(basePrice * speedMultiplier);
-    if (costEl) {
-      costEl.textContent = '$' + total.toLocaleString('en-US');
+    if (noteEl && selectedNote) {
+      noteEl.textContent = selectedNote;
     }
-    if (timeEl) {
-      timeEl.textContent = speedMultiplier > 1.1 
-        ? '⚡ Priority Fast-Track: 2 - 3 Weeks' 
-        : `${selectedWeeks}`;
+    if (selectedPriceStr) {
+      if (costEl) {
+        costEl.textContent = selectedPriceStr;
+        costEl.style.fontSize = selectedPriceStr.length > 20 ? '1.55rem' : selectedPriceStr.length > 12 ? '1.85rem' : '';
+        costEl.style.lineHeight = '1.2';
+      }
+      if (timeEl) {
+        timeEl.textContent = speedMultiplier > 1.1 && !selectedPriceStr.startsWith('Rp')
+          ? '⚡ Priority Fast-Track: 2 - 3 Weeks' 
+          : `⏱ Standard Delivery: ${selectedWeeks}`;
+      }
+      if (stackEl) {
+        stackEl.textContent = selectedStack;
+      }
+    } else {
+      const total = Math.round((basePrice || 3500) * speedMultiplier);
+      if (costEl) {
+        costEl.textContent = '$' + total.toLocaleString('en-US');
+        costEl.style.fontSize = '';
+        costEl.style.lineHeight = '';
+      }
+      if (timeEl) {
+        timeEl.textContent = speedMultiplier > 1.1 
+          ? '⚡ Priority Fast-Track: 2 - 3 Weeks' 
+          : `${selectedWeeks}`;
+      }
+      if (stackEl) {
+        stackEl.textContent = selectedStack;
+      }
     }
-    if (stackEl) {
-      stackEl.textContent = selectedStack;
-    }
+  }
+
+  const inquireBtn = document.querySelector('.estimator-readout-card a');
+  if (inquireBtn) {
+    inquireBtn.addEventListener('click', () => {
+      const scopeSummary = stackEl ? stackEl.textContent : selectedStack;
+      const priceSummary = selectedPriceStr || (costEl ? costEl.textContent : `$${basePrice}`);
+      try {
+        localStorage.setItem('selectedScopeForInquiry', `${scopeSummary} [Investment: ${priceSummary}]`);
+      } catch (e) {}
+    });
   }
 
   recalculate();
@@ -336,6 +379,15 @@ function initDispatchForm() {
   const closeSuccessBtn = document.getElementById('closeFormspreeSuccessBtn');
 
   if (!form) return;
+
+  const clientBrief = document.getElementById('clientBrief');
+  try {
+    const savedScope = localStorage.getItem('selectedScopeForInquiry');
+    if (savedScope && clientBrief && !clientBrief.value.trim()) {
+      clientBrief.value = `INQUIRY FOR SCOPE:\n${savedScope}\n\nPROJECT BRIEF / CONSULTATION NOTES:\n`;
+      localStorage.removeItem('selectedScopeForInquiry');
+    }
+  } catch (e) {}
 
   function closeSuccessModal() {
     if (successModal) successModal.style.display = 'none';
