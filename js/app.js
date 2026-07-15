@@ -28,6 +28,13 @@ function initSmartNavbar() {
   window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
 
+    // Add scrolled glass style when not at top
+    if (currentScrollY > 20) {
+      navbar.classList.add('navbar-scrolled');
+    } else {
+      navbar.classList.remove('navbar-scrolled');
+    }
+
     // Never hide navbar when mobile drawer is open
     if (mobileDrawer && mobileDrawer.classList.contains('open')) {
       navbar.classList.remove('navbar-hidden');
@@ -35,28 +42,28 @@ function initSmartNavbar() {
       return;
     }
 
-    // Always show when near top of page
+    // Always reveal when near top of page
     if (currentScrollY <= 40) {
       navbar.classList.remove('navbar-hidden');
       lastScrollY = currentScrollY;
       return;
     }
 
-    // Scrolling down -> hide navbar (unless user is currently hovering cursor near top)
-    if (currentScrollY > lastScrollY && currentScrollY > 70 && !isHovered) {
+    // Scrolling down -> hide navbar (if delta > 6px to ignore tiny bounces)
+    if (currentScrollY > lastScrollY + 6 && currentScrollY > 80 && !isHovered) {
       navbar.classList.add('navbar-hidden');
     }
-    // Scrolling up -> immediately reveal navbar
-    else if (currentScrollY < lastScrollY) {
+    // Scrolling up -> reveal navbar immediately (if delta > 6px)
+    else if (currentScrollY < lastScrollY - 6) {
       navbar.classList.remove('navbar-hidden');
     }
 
     lastScrollY = currentScrollY;
   }, { passive: true });
 
-  // Desktop Hover Trigger at Top Edge of Viewport
+  // Desktop Hover Trigger: reveal when cursor is near top edge of viewport (<= 45px) or inside navbar
   window.addEventListener('mousemove', (e) => {
-    if (e.clientY <= 38 || navbar.contains(e.target)) {
+    if (e.clientY <= 45 || navbar.contains(e.target)) {
       isHovered = true;
       navbar.classList.remove('navbar-hidden');
     } else {
