@@ -14,6 +14,9 @@
     />
     <meta name="author" content="Adri Aufa" />
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
     <!-- Preconnect & Modern Inter Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -175,7 +178,7 @@
             <!-- Left Column: Portrait Photo & Badge -->
             <div class="profile-photo-wrapper">
               <img
-                src="adri_aufa_profile.jpeg"
+                src="adri-aufa-rachman-photo.jpeg"
                 onerror="
                   this.onerror = null;
                   this.src = 'assets/images/adri_aufa_profile.jpg';
@@ -328,11 +331,11 @@
 
             <div class="feature-specs-grid">
               <div class="spec-glass-item">
-                <div class="lbl">1. BACKEND ARCHITECTURE</div>
+                <div class="lbl">BACKEND ARCHITECTURE</div>
                 <div class="val">Laravel (PHP)</div>
               </div>
               <div class="spec-glass-item">
-                <div class="lbl">2. AI SYNTHESIS LAYER</div>
+                <div class="lbl">AI SYNTHESIS LAYER</div>
                 <div class="val">OpenAI API (IRAC)</div>
               </div>
               <div class="spec-glass-item">
@@ -433,6 +436,13 @@
                   rel="noopener noreferrer"
                   class="contact-social-link"
                   >Instagram</a
+                ><br />
+                <a
+                  href="https://github.com/Adri-sixx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-social-link"
+                  >GitHub</a
                 >
               </div>
             </div>
@@ -487,11 +497,7 @@
           </div>
           <div>
             WEB BUILDING (VANILLA WEBSITE) • FULL STACK WEB (MYSQL, NEXT.JS) •
-            <a
-              href="pricing.html"
-              style="color: var(--accent-red); text-decoration: underline"
-              >SEE PRICING</a
-            >
+            <a href="pricing.html" class="footer-pricing-link">SEE PRICING</a>
           </div>
         </footer>
       </div>
@@ -552,93 +558,24 @@
           </div>
 
           <div
+            class="feature-specs-grid"
             style="
-              display: grid;
               grid-template-columns: repeat(3, 1fr);
               gap: 16px;
               margin-bottom: 28px;
             "
           >
-            <div
-              style="
-                padding: 18px;
-                background: rgba(255, 255, 255, 0.03);
-                border: 1px solid var(--border-glass);
-                border-radius: 16px;
-              "
-            >
-              <div
-                style="
-                  font-family: var(--font-poster);
-                  font-size: 2.4rem;
-                  color: var(--accent-red);
-                "
-              >
-                Seconds
-              </div>
-              <div
-                style="
-                  font-family: var(--font-mono);
-                  font-size: 0.75rem;
-                  color: var(--text-secondary);
-                "
-              >
-                IRAC Brief Generation vs. Hours
-              </div>
+            <div class="spec-glass-item">
+              <div class="lbl">IRAC BRIEF GENERATION VS. HOURS</div>
+              <div class="val" style="color: var(--accent-red)">Seconds</div>
             </div>
-            <div
-              style="
-                padding: 18px;
-                background: rgba(255, 255, 255, 0.03);
-                border: 1px solid var(--border-glass);
-                border-radius: 16px;
-              "
-            >
-              <div
-                style="
-                  font-family: var(--font-poster);
-                  font-size: 2.4rem;
-                  color: var(--text-primary);
-                "
-              >
-                Laravel + MySQL
-              </div>
-              <div
-                style="
-                  font-family: var(--font-mono);
-                  font-size: 0.75rem;
-                  color: var(--text-secondary);
-                "
-              >
-                1. Backend Architecture Stack
-              </div>
+            <div class="spec-glass-item">
+              <div class="lbl">BACKEND ARCHITECTURE STACK</div>
+              <div class="val">Laravel + MySQL</div>
             </div>
-            <div
-              style="
-                padding: 18px;
-                background: rgba(255, 255, 255, 0.03);
-                border: 1px solid var(--border-glass);
-                border-radius: 16px;
-              "
-            >
-              <div
-                style="
-                  font-family: var(--font-poster);
-                  font-size: 2.4rem;
-                  color: var(--text-primary);
-                "
-              >
-                OpenAI API
-              </div>
-              <div
-                style="
-                  font-family: var(--font-mono);
-                  font-size: 0.75rem;
-                  color: var(--text-secondary);
-                "
-              >
-                2. Legal Synthesis Engine
-              </div>
+            <div class="spec-glass-item">
+              <div class="lbl">LEGAL SYNTHESIS ENGINE</div>
+              <div class="val">OpenAI API</div>
             </div>
           </div>
 

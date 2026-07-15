@@ -1022,6 +1022,16 @@ html[data-theme="dark"] .grunge-hero-headline {
   color: var(--text-secondary);
 }
 
+.footer-pricing-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer-pricing-link:hover {
+  color: var(--accent-red);
+}
+
 /* Modal & Toast */
 .modal-backdrop {
   position: fixed;
