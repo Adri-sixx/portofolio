@@ -290,12 +290,12 @@ function initPortfoliteEstimator() {
   const stackEl = document.getElementById('estimateStackDisplay');
   const noteEl = document.getElementById('estimateNoteDisplay');
 
-  let basePrice = 3500;
-  let selectedPriceStr = '$3,500 - $6,000';
+  let basePrice = 1500;
+  let selectedPriceStr = '$1,500 - $5,000';
   let speedMultiplier = 1.0;
   let selectedWeeks = '4 - 6 Weeks Delivery';
-  let selectedStack = 'Full Stack Web (Next.js + MySQL + Vanilla JS)';
-  let selectedNote = '*Base rate starts at $3,500. Total cost ranges up to $6,000 depending on your custom requirements.';
+  let selectedStack = 'Full Stack Web (Next.js + MySQL)';
+  let selectedNote = '*Base rate starts at $1,500. Total cost ranges up to $5,000 depending on your custom requirements.';
 
   function attachSelection(cards, group) {
     cards.forEach(card => {
@@ -309,9 +309,9 @@ function initPortfoliteEstimator() {
           } else {
             selectedPriceStr = null;
           }
-          basePrice = parseInt(card.getAttribute('data-price') || 3500);
+          basePrice = parseInt(card.getAttribute('data-price') || 1500);
           selectedWeeks = card.getAttribute('data-weeks') || '4 - 6 Weeks Delivery';
-          selectedStack = card.getAttribute('data-stack') || 'Next.js + MySQL + Vanilla JS';
+          selectedStack = card.getAttribute('data-stack') || 'Full Stack Web (Next.js + MySQL)';
           if (card.hasAttribute('data-note')) {
             selectedNote = card.getAttribute('data-note');
           }
@@ -346,7 +346,7 @@ function initPortfoliteEstimator() {
         stackEl.textContent = selectedStack;
       }
     } else {
-      const total = Math.round((basePrice || 3500) * speedMultiplier);
+      const total = Math.round((basePrice || 1500) * speedMultiplier);
       if (costEl) {
         costEl.textContent = '$' + total.toLocaleString('en-US');
         costEl.style.fontSize = '';
