@@ -371,7 +371,9 @@ html[data-theme="light"] .fluid-aura-glow::before {
   flex-direction: column;
   gap: 20px;
   padding: 0 28px;
-  background: var(--bg-frame);
+  background: var(--bg-frame-scrolled, rgba(14, 16, 21, 0.98));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid transparent;
   max-height: 0;
   opacity: 0;
@@ -384,12 +386,17 @@ html[data-theme="light"] .fluid-aura-glow::before {
     transform 0.42s cubic-bezier(0.16, 1, 0.3, 1),
     padding 0.42s ease,
     border-color 0.3s ease;
-  position: relative;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 990;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
 }
 
 .mobile-drawer.open {
-  max-height: 460px;
+  max-height: 480px;
   opacity: 1;
   transform: translateY(0);
   padding: 24px 28px;
