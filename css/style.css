@@ -443,17 +443,172 @@ html[data-theme="light"] .fluid-aura-glow::before {
 }
 
 /* ==========================================================================
-   CENTERED HERO SECTION (LUXURY EDITORIAL SERIF HEADLINE)
+   PROFILE HERO SECTION (PERSONAL INTRODUCTION — PHOTO + INFO LAYOUT)
    ========================================================================== */
-.template-hero {
-  padding: 85px 32px 64px 32px;
+.profile-hero {
+  padding: clamp(56px, 8vw, 96px) clamp(24px, 5vw, 64px) 64px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
-/* 1. SEPARATED OVAL PILL BADGE */
+.profile-hero-inner {
+  display: flex;
+  align-items: center;
+  gap: clamp(40px, 6vw, 88px);
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Photo Side */
+.profile-hero-photo-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.profile-hero-photo-ring {
+  width: clamp(180px, 22vw, 260px);
+  height: clamp(180px, 22vw, 260px);
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--accent-red) 0%, rgba(230, 28, 28, 0.2) 60%, transparent 100%);
+  box-shadow: 0 0 48px rgba(230, 28, 28, 0.28), 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+.profile-hero-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border: 3px solid var(--bg-frame);
+}
+
+.profile-hero-status-dot {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #22c55e;
+  border: 3px solid var(--bg-frame);
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.7);
+  animation: statusPulse 2.4s infinite;
+}
+
+@keyframes statusPulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(34, 197, 94, 0.7); }
+  50% { box-shadow: 0 0 18px rgba(34, 197, 94, 1); }
+}
+
+/* Info Side */
+.profile-hero-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  background: var(--bg-pill);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.profile-hero-badge .red-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
+  flex-shrink: 0;
+}
+
+.profile-hero-name {
+  font-family: var(--font-grunge-main);
+  font-weight: 800;
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.profile-hero-title {
+  font-family: var(--font-typewriter);
+  font-size: clamp(0.95rem, 1.5vw, 1.12rem);
+  color: var(--text-secondary);
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.profile-hero-title .sep {
+  color: var(--text-muted);
+}
+
+.red-grunge-inline {
+  color: var(--accent-red);
+  font-weight: 700;
+}
+
+.profile-hero-bio {
+  font-family: var(--font-typewriter);
+  font-size: clamp(0.9rem, 1.2vw, 1.02rem);
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 24px;
+  max-width: 560px;
+}
+
+/* Tech Stack Tags */
+.profile-hero-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.stack-tag {
+  padding: 6px 16px;
+  background: var(--bg-pill);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  backdrop-filter: blur(6px);
+}
+
+.stack-tag:hover {
+  background: var(--accent-red-subtle);
+  border-color: rgba(230, 28, 28, 0.4);
+  color: var(--accent-red);
+}
+
+/* CTA Buttons */
+.profile-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Old hero classes (kept for scroll indicator reuse) */
 .hero-pill-badge {
   display: inline-flex;
   align-items: center;
@@ -476,39 +631,6 @@ html[data-theme="light"] .fluid-aura-glow::before {
   border-radius: 50%;
   background: var(--accent-red);
   box-shadow: 0 0 8px var(--accent-red);
-}
-
-/* Modern Inter Headline */
-.grunge-hero-headline {
-  font-family: var(--font-grunge-main);
-  font-weight: 800;
-  font-size: clamp(2.8rem, 5.5vw, 5.2rem);
-  line-height: 1.08;
-  color: var(--text-primary);
-  max-width: 1020px;
-  letter-spacing: -0.035em;
-  margin-bottom: 28px;
-}
-
-html[data-theme="dark"] .grunge-hero-headline {
-  text-shadow: 
-    0 12px 40px rgba(0, 0, 0, 0.85),
-    0 0 35px rgba(230, 28, 28, 0.2);
-}
-
-.grunge-hero-headline .red-grunge {
-  color: var(--accent-red);
-  font-weight: 800;
-}
-
-/* Subtitle */
-.hero-subdesc {
-  font-family: var(--font-typewriter);
-  font-size: 1.15rem;
-  color: var(--text-secondary);
-  max-width: 680px;
-  line-height: 1.75;
-  margin-bottom: 40px;
 }
 
 /* Glassmorphic Pill Action Buttons */
@@ -605,33 +727,6 @@ html[data-theme="dark"] .grunge-hero-headline {
 @keyframes wheelScroll {
   0% { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(12px); opacity: 0; }
-}
-
-/* Client / Tech Stack Logo Strip at Bottom of Hero */
-.tech-strip-logos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 44px;
-  flex-wrap: wrap;
-  padding: 10px 24px;
-}
-
-.logo-item {
-  font-family: var(--font-grunge-alt);
-  font-weight: 600;
-  font-size: 1.15rem;
-  color: var(--text-secondary);
-  opacity: 0.85;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: opacity var(--transition-fast);
-}
-
-.logo-item:hover {
-  opacity: 1;
-  color: var(--text-primary);
 }
 
 /* ==========================================================================
@@ -1192,6 +1287,15 @@ html[data-theme="dark"] .grunge-hero-headline {
     grid-template-columns: 1fr;
   }
   
+  /* Profile Hero: stack photo + info on tablet */
+  .profile-hero-inner {
+    gap: 36px;
+  }
+  .profile-hero-photo-ring {
+    width: clamp(160px, 20vw, 210px);
+    height: clamp(160px, 20vw, 210px);
+  }
+  
   .option-card-glass {
     padding: 20px 22px;
     gap: 16px;
@@ -1217,8 +1321,27 @@ html[data-theme="dark"] .grunge-hero-headline {
   .btn-burger {
     display: inline-flex;
   }
-  .template-hero {
-    padding: 56px 16px 40px 16px;
+  /* Profile Hero mobile: stack photo above info */
+  .profile-hero {
+    padding: 48px 16px 40px 16px;
+  }
+  .profile-hero-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
+  }
+  .profile-hero-photo-ring {
+    width: 160px;
+    height: 160px;
+  }
+  .profile-hero-title,
+  .profile-hero-stack,
+  .profile-hero-actions {
+    justify-content: center;
+  }
+  .profile-hero-bio {
+    max-width: 100%;
   }
   .frame-section {
     padding: 40px 16px;
